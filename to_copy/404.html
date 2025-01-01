@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: black;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <link rel="stylesheet" href="/style.css">
+    <meta property="og:title" content="Gust's Shelter Plugins"/>
+    <meta property="og:description" content="A plugin."/>
+    <meta property="og:type" content="website"/>
+</head>
+<body>
+    <h1><a href="/">Gust's Shelter Plugins</a></h1>
+    <h2 class="s404">Page not found. There's no plugin, either.</h2>
+    <div class="hidden">
+        <h2 class="plugin">There's a plugin here! You have to import the plugin to shelter.</h2>
+        <div class="plugin_info">
+            <span class="name">Unknown Plugin</span>
+            <span class="desc">This is a placeholder</span>
+        </div>
+
+        <p>Shelter is a discord mod. You can get it here: <a href="https://github.com/uwu/shelter/">https://github.com/uwu/shelter/</a></p>
+        <p>Go to your <b>Shelter Settings</b>, click <b>Add Plugin</b>, and paste this link to the input box:</p>
+        <br>
+        <span class="copy_url"></span>
+    </div>
+    <script>
+        document.querySelector(".copy_url").innerText = window.location.href
+
+        fetch("./plugin.json").then((resp)=>{
+            resp.json().then((json)=>{
+                document.querySelector(".s404").remove()
+                document.querySelector(".hidden").classList.remove("hidden")
+
+                document.querySelector(".name").innerText = json["name"]
+                document.querySelector(".desc").innerText = json["description"]
+            })
+        })
+    </script>
+</body>
+</html>

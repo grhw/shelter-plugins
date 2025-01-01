@@ -1,0 +1,59 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+}
+:root {
+    text-align: center;
+}
+h1 {
+    font-size: 3em;
+}
+h2 {
+    font-size: 2em;
+    color: rgb(255, 152, 152);
+}
+
+.plugin {
+    color: rgb(152, 176, 255);
+}
+a {
+    color: rgb(255, 152, 152);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.copy_url {
+    background-color: rgba(255, 0, 0, 0.1);
+    border: solid 1px white;
+    padding: 15px;
+    border-radius: 15px;
+    width: max-content;
+}
+.hidden {
+    display: none;
+}
+
+.plugin_info {
+    background-color: rgb(58, 47, 58);
+    width: 50%;
+    min-width: max-content;
+    max-width: 50em;
+    left: 50%;
+    position: relative;
+    display: block;
+    transform: translateX(-50%);
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.name {
+    font-size: 2em;
+    display: block;
+}
+
+.desc {
+    margin-top: 1em;
+    font-size: 1.2em;
+    display: block;
+}
