@@ -9,7 +9,7 @@ store.emojis ??= "🇵🇭"
 
 export const settings = () => (
 	<div>
-		<p style="margin-top: 0;">Reacts to every message sent in a channel. Made by <LinkButton href="https://guhw.dev">guhw</LinkButton>!</p>
+		<p style="margin-top: 0;">Reacts to every message sent in a channel via API. Made by <LinkButton href="https://guhw.dev">guhw</LinkButton>!</p>
 		
 		<Divider mt mb></Divider>
 
@@ -23,7 +23,7 @@ export const settings = () => (
 )
 
 export function onLoad() {
-	log("loaded :3")
+	log("[AutoMessageReactions] loaded :3")
 	shelter.plugin.scoped.flux.intercept(dispatch => {
 		if (dispatch.type == "MESSAGE_CREATE" && dispatch.channelId == store.channelId && !dispatch.optimistic) {
 			let i = 0

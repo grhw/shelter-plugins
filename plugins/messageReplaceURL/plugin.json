@@ -1,0 +1,5 @@
+{
+  "name": "Message Replace from URL",
+  "author": "guhw :3",
+  "description": "Replaces your sent messages (if message only contains K), to V, from a URL with {\"K\":\"V\"} json."
+}
