@@ -36,9 +36,9 @@ a:hover {
 
 .plugin_info {
     background-color: rgb(58, 47, 58);
-    width: 50%;
-    min-width: max-content;
-    max-width: 50em;
+    width: max-content;
+    max-width: 70vw;
+    min-width: 40%;
     left: 50%;
     position: relative;
     display: block;
@@ -56,4 +56,5 @@ a:hover {
     margin-top: 1em;
     font-size: 1.2em;
     display: block;
+    word-wrap: normal;
 }
