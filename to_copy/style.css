@@ -71,7 +71,7 @@ a:hover {
     }
 }
 
-.s404 {
+.fadein {
     animation-name: fade-in;
     animation-duration: 3s;
 }
