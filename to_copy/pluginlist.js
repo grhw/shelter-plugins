@@ -25,7 +25,7 @@ getPluginList(()=>{
 
         fetch("/" + name + "/plugin.json").then((v)=>{
             v.json().then((json)=>{
-                document.querySelector(".list").innerHTML += `<div class="plugin_info"><a href="/${name}/" class="name">${json.name}</a><span class="desc">${json.description}</span></div><br>`
+                document.querySelector(".list").innerHTML += `<div class="plugin_info fadein"><a href="/${name}/" class="name">${json.name}</a><span class="desc">${json.description}</span></div><br>`
             })
         })
     });

@@ -33,6 +33,7 @@
                 document.querySelector(".hidden").classList.remove("hidden")
 
                 document.querySelector(".name").innerText = json["name"]
+                document.querySelector("title").innerText = json["name"]
                 document.querySelector(".desc").innerText = json["description"]
             })
         })

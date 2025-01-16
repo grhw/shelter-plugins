@@ -73,5 +73,5 @@ a:hover {
 
 .fadein {
     animation-name: fade-in;
-    animation-duration: 3s;
+    animation-duration: 2s;
 }
