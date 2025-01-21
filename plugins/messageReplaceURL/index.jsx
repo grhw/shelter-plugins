@@ -7,13 +7,18 @@ const { Divider, Header, TextBox, Space, Button, LinkButton, HeaderTags, ButtonS
 store.url ??= "https://example.com/"
 store.json ??= {"wasd": "wow"}
 
+function sanitizeString(str){
+    str = str.replace(/[^a-z0-9áéíóúñü \.,_-]/gim,"");
+    return str.trim();
+}
+
 function createPreview() {
 	const preview = document.querySelector("#guhw_mru_preview")
 	preview.innerHTML = ""
 	Object.keys(store.json).forEach(k => {
 		const v = store.json[k]
 
-		preview.innerHTML += `<li><code><b>${k}</b> ${v}</code></li>`
+		preview.innerHTML += `<li><code><b>${sanitizeString(k)}</b> ${sanitizeString(v)}</code></li>`
 	});
 }
 
