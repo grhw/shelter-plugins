@@ -4,8 +4,8 @@ const {
 } = shelter;
 const { Divider, Header, TextBox, Space, Button, LinkButton, HeaderTags, ButtonSizes } = shelter.ui;
 
-store.url = "https://example.com/"
-store.json = {"wasd": "wow"}
+store.url ??= "https://example.com/"
+store.json ??= {"wasd": "wow"}
 
 function createPreview() {
 	const preview = document.querySelector("#guhw_mru_preview")
