@@ -8,7 +8,7 @@ store.url ??= "https://example.com/"
 store.json ??= {"wasd": "wow"}
 
 function sanitizeString(str){
-    str = str.replaceAll("<","&lt;").replaceAll(">","&lt;")
+    str = str.replaceAll("<","&lt;").replaceAll(">","&gt;")
     return str.trim();
 }
 
