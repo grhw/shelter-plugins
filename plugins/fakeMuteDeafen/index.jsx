@@ -7,7 +7,7 @@ const {
 import css from "./style.css"
 
 function createButton() {
-	const parent = document.querySelector('.button__67645:has([aria-label="Mute"]):not(:has(.guhw-fmd))')
+	const parent = document.querySelector('.buttons__37e49:has([aria-label="Mute"]):not(:has(.guhw-fmd))')
 	if (parent) {
 		var button = parent.childNodes[1].cloneNode(true)
 		parent.appendChild(button)
