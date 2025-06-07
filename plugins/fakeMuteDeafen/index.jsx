@@ -7,12 +7,12 @@ const {
 import css from "./style.css"
 
 function createButton() {
-	const parent = document.querySelector('.buttons__37e49:has(.micButtonParent__37e49 [aria-label="Mute"]):not(:has(.guhw-fmd))')
+	const parent = document.querySelector('.buttons__37e49:has(.micButtonParent__37e49:has([aria-label="Mute"])):not(:has(.guhw-fmd))')
 	if (parent) {
-		var button = parent.childNodes[1].cloneNode(true)
+		var button = parent.querySelector(".micButtonParent__37e49").cloneNode(true)
 		parent.appendChild(button)
 		button.classList.add("guhw-fmd")
-		button.setAttribute("aria-label","Lock Voice State")
+		button.childNodes[0].setAttribute("aria-label","Lock Voice State")
 		button.querySelector("svg").innerHTML = `<path fill="currentColor" fill-rule="evenodd" d="M6 9h1V6a5 5 0 0 1 10 0v3h1a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3v-8a3 3 0 0 1 3-3Zm9-3v3H9V6a3 3 0 1 1 6 0Zm-1 8a2 2 0 0 1-1 1.73V18a1 1 0 1 1-2 0v-2.27A2 2 0 1 1 14 14Z" clip-rule="evenodd" class=""></path>`
 		button.addEventListener("click",window.fakeDeaf())
 	}
